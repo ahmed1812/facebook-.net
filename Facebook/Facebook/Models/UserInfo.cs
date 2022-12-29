@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Facebook.Models
 {
@@ -15,6 +16,8 @@ namespace Facebook.Models
         public string State { get; set; }
         public string ZipCode { get; set; }
         public string Image { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
         public DateTime DOB { get; set; }
         public DateTime Created { get; set; }
     }

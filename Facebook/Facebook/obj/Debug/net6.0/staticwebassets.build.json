@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t7wdwrQ0Q9+1QIzVDwux7aQDnGbjqEWoVET1C5q2CaQ=",
+  "Hash": "p29oSi0LD9gP8kn8fyJTpktPNfKGTeVyVPkgTv5orWw=",
   "Source": "Facebook",
   "BasePath": "_content/Facebook",
   "Mode": "Default",
@@ -1103,6 +1103,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\Image\\UserPicture\\images222136102.jpeg",
+      "SourceId": "Facebook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\",
+      "BasePath": "_content/Facebook",
+      "RelativePath": "Image/UserPicture/images222136102.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\UserPicture\\images222136102.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\Image\\UserPicture\\maxresdefault220639660.jpg",
+      "SourceId": "Facebook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\",
+      "BasePath": "_content/Facebook",
+      "RelativePath": "Image/UserPicture/maxresdefault220639660.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\UserPicture\\maxresdefault220639660.jpg"
     },
     {
       "Identity": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\js\\site.js",

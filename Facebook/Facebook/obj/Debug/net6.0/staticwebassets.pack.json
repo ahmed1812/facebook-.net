@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Facebook.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\Image\\UserPicture\\images222136102.jpeg",
+      "PackagePath": "staticwebassets\\Image\\UserPicture\\images222136102.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\Image\\UserPicture\\maxresdefault220639660.jpg",
+      "PackagePath": "staticwebassets\\Image\\UserPicture\\maxresdefault220639660.jpg"
+    },
+    {
       "Id": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

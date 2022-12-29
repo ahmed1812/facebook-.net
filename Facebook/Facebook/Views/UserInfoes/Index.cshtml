@@ -76,7 +76,8 @@
                 @Html.DisplayFor(modelItem => item.ZipCode)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Image)
+@*                @Html.DisplayFor(modelItem => item.Image)
+                *@                <img src="@("~/Image/UserPicture/"+item.Image)" asp-append-version="true" width="100px" height="100px" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DOB)

@@ -11,5 +11,7 @@ namespace Facebook.Data
         {
         }
         public DbSet<UserInfo> UserInfos { get; set; }
+        public DbSet<Post> Posts { get; set; }
+
     }
 }
