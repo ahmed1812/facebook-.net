@@ -32,8 +32,7 @@ namespace Facebook.Controllers
                                                           {
                                                               MyInfo = userInfo,
                                                               UserPosts = (_context.Posts.Where(x => x.UserId == userInfo.UserId && x.Id == post.Id)).ToList()
-                                                          }
-                               ).ToList();
+                                                          }).ToList();
               return View(userPerPost);
         }
 
