@@ -4,55 +4,17 @@
 @{
     ViewData["Title"] = "Index";
 }
+@foreach (var item in Model)
+{
+            
+        @Html.DisplayFor(modelItem => item.MyInfo.FullName)<br />
+            
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MyInfo.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MyInfo.Id)
-            </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.CreateAt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserId)
-            </th>*@
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MyInfo.FullName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MyInfo.Image)
-            </td>
-               
-           @foreach(var p in item.UserPosts)
-           {
-                 <td>
-                    @Html.DisplayFor(modelItem => p.Titel)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => p.CreateAt)
-                </td>  
-            }
-                <td>
-                @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        @foreach (var p in item.UserPosts)
+        {
+                @Html.DisplayFor(modelItem => p.Titel)<br />
+                @Html.DisplayFor(modelItem => p.Body)<br />
+                     
+        }<br />
+           
+}<br />

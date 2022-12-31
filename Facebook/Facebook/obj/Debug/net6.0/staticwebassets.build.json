@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p29oSi0LD9gP8kn8fyJTpktPNfKGTeVyVPkgTv5orWw=",
+  "Hash": "qTc13MZ/9m/qaLVPkjL7pZN7UvGm/I1B7L9j1m5h6Xo=",
   "Source": "Facebook",
   "BasePath": "_content/Facebook",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\UserPicture\\images222136102.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\Image\\UserPicture\\images225352215.jpeg",
+      "SourceId": "Facebook",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\",
+      "BasePath": "_content/Facebook",
+      "RelativePath": "Image/UserPicture/images225352215.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\UserPicture\\images225352215.jpeg"
     },
     {
       "Identity": "C:\\Users\\zaidf\\Desktop\\asp.net project\\Facebook\\Facebook\\wwwroot\\Image\\UserPicture\\maxresdefault220639660.jpg",

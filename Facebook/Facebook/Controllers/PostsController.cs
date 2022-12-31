@@ -25,16 +25,14 @@ namespace Facebook.Controllers
         public async Task<IActionResult> Index()
         {
             IEnumerable<UserPostViewModel> userPerPost = (from userInfo in _context.UserInfos
-                               from post in _context.Posts
-                               where post.UserId == userInfo.UserId
-                               select new UserPostViewModel
-                               {
-                                   MyInfo = userInfo,
-                                   UserPosts = (from p in _context.Posts
-                                                where p.UserId == userInfo.UserId
-                                                select p
-                                                ).ToList()
-                               }
+                                                          from post in _context.Posts
+                                                          where userInfo.UserId == post.UserId
+                                                          orderby post.Id
+                                                          select new UserPostViewModel
+                                                          {
+                                                              MyInfo = userInfo,
+                                                              UserPosts = (_context.Posts.Where(x => x.UserId == userInfo.UserId && x.Id == post.Id)).ToList()
+                                                          }
                                ).ToList();
               return View(userPerPost);
         }
