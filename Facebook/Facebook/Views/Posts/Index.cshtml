@@ -14,7 +14,12 @@
         {
                 @Html.DisplayFor(modelItem => p.Titel)<br />
                 @Html.DisplayFor(modelItem => p.Body)<br />
-                     
-        }<br />
+        @foreach (var c in item.comments)
+        {
+            @Html.DisplayFor(modelItem => c.Body)
+            <br />
+        }
+
+}<br />
            
 }<br />

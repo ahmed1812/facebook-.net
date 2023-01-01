@@ -22,34 +22,34 @@ namespace Facebook.Controllers
         // GET: Comments
         public async Task<IActionResult> Index()
         {
-            var CommentList = new List<Comment>();
+            //var CommentList = new List<Comment>();
 
 
-            CommentList.Add(new Comment { Id = 1, Body = "Comment 1", PostId = 1, CreateAt = DateTime.Now, UserId = 3 });
-            CommentList.Add(new Comment { Id = 2, Body = "Comment 2", PostId = 1, CreateAt = DateTime.Now, UserId = 1 });
-              CommentList.Add(new Comment { Id = 3, Body = "Comment 3", PostId = 1, CreateAt = DateTime.Now, UserId = 2 });
+            //CommentList.Add(new Comment { Id = 1, Body = "Comment 1", PostId = 1, CreateAt = DateTime.Now, UserId = 3 });
+            //CommentList.Add(new Comment { Id = 2, Body = "Comment 2", PostId = 1, CreateAt = DateTime.Now, UserId = 1 });
+            //  CommentList.Add(new Comment { Id = 3, Body = "Comment 3", PostId = 1, CreateAt = DateTime.Now, UserId = 2 });
 
-            CommentList.Add(new Comment { Id = 4, Body = "Comment 1", PostId = 2, CreateAt = DateTime.Now, UserId = 2 });
-            CommentList.Add(new Comment { Id = 5, Body = "Comment 2", PostId = 2, CreateAt = DateTime.Now, UserId = 3 });
-            CommentList.Add(new Comment { Id = 6, Body = "Comment 3", PostId = 2, CreateAt = DateTime.Now, UserId = 1 });
+            //CommentList.Add(new Comment { Id = 4, Body = "Comment 1", PostId = 2, CreateAt = DateTime.Now, UserId = 2 });
+            //CommentList.Add(new Comment { Id = 5, Body = "Comment 2", PostId = 2, CreateAt = DateTime.Now, UserId = 3 });
+            //CommentList.Add(new Comment { Id = 6, Body = "Comment 3", PostId = 2, CreateAt = DateTime.Now, UserId = 1 });
 
-            CommentList.Add(new Comment { Id = 7, Body = "Comment 1", PostId = 3, CreateAt = DateTime.Now, UserId = 1 });
-               // new Comment { Id = 8, Body = "Comment 2", PostId = 3, CreateAt = DateTime.Now, UserId = 2},
-               // new Comment { Id = 9, Body = "Comment 3", PostId = 3, CreateAt = DateTime.Now, UserId = 3},
+            ////CommentList.Add(new Comment { Id = 7, Body = "Comment 1", PostId = 3, CreateAt = DateTime.Now, UserId = 1 });
+            //   // new Comment { Id = 8, Body = "Comment 2", PostId = 3, CreateAt = DateTime.Now, UserId = 2},
+            //   // new Comment { Id = 9, Body = "Comment 3", PostId = 3, CreateAt = DateTime.Now, UserId = 3},
             
-                return View(CommentList);
-            //return View(await _context.Comment.ToListAsync());
+            //    return View(CommentList);
+            return View(await _context.Comments.ToListAsync());
         }
 
         // GET: Comments/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Comment == null)
+            if (id == null || _context.Comments == null)
             {
                 return NotFound();
             }
 
-            var comment = await _context.Comment
+            var comment = await _context.Comments
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (comment == null)
             {
@@ -84,12 +84,12 @@ namespace Facebook.Controllers
         // GET: Comments/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Comment == null)
+            if (id == null || _context.Comments == null)
             {
                 return NotFound();
             }
 
-            var comment = await _context.Comment.FindAsync(id);
+            var comment = await _context.Comments.FindAsync(id);
             if (comment == null)
             {
                 return NotFound();
@@ -135,12 +135,12 @@ namespace Facebook.Controllers
         // GET: Comments/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Comment == null)
+            if (id == null || _context.Comments == null)
             {
                 return NotFound();
             }
 
-            var comment = await _context.Comment
+            var comment = await _context.Comments
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (comment == null)
             {
@@ -155,14 +155,14 @@ namespace Facebook.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Comment == null)
+            if (_context.Comments == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Comment'  is null.");
             }
-            var comment = await _context.Comment.FindAsync(id);
+            var comment = await _context.Comments.FindAsync(id);
             if (comment != null)
             {
-                _context.Comment.Remove(comment);
+                _context.Comments.Remove(comment);
             }
             
             await _context.SaveChangesAsync();
@@ -171,7 +171,7 @@ namespace Facebook.Controllers
 
         private bool CommentExists(int id)
         {
-          return _context.Comment.Any(e => e.Id == id);
+          return _context.Comments.Any(e => e.Id == id);
         }
     }
 }

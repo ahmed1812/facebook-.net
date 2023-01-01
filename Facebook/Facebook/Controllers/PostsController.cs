@@ -31,7 +31,8 @@ namespace Facebook.Controllers
                                                           select new UserPostViewModel
                                                           {
                                                               MyInfo = userInfo,
-                                                              UserPosts = (_context.Posts.Where(x => x.UserId == userInfo.UserId && x.Id == post.Id)).ToList()
+                                                              UserPosts = (_context.Posts.Where(x => x.UserId == userInfo.UserId && x.Id == post.Id)).ToList(),
+                                                              comments = (_context.Comments.Where(x => x.Id == post.Id)).ToList()
                                                           }).ToList();
               return View(userPerPost);
         }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Facebook.Models
 {
@@ -6,10 +7,11 @@ namespace Facebook.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Body { get; set; }
-        public int UserId { get; set; }
-        public UserInfo ComUser { get; set; }
-        public int PostId { get; set; }
+        public string? Body { get; set; }
+        [NotMapped]
+        public UserInfo? UserId { get; set; }
+        [NotMapped]
+        public Post PostId { get; set; }
         public DateTime CreateAt { get; set; }
     }
 }
